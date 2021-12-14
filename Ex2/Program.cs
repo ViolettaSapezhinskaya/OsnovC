@@ -1,1 +1,3 @@
-﻿//Написать метод подсчета количества цифр числа.
+﻿string a=Console.ReadLine();
+int x=a.Length;
+Console.WriteLine(x);
