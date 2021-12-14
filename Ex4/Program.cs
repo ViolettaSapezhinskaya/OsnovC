@@ -4,13 +4,20 @@
 //С помощью цикла do while ограничить ввод пароля тремя попытками.
 string login = "root";
 string password = "GeekBrains";
-string log=Console.ReadLine();
-string pas=Console.ReadLine();
-if (login==log && password==pas)
+int i = 0;
+do
 {
-    Console.WriteLine("Поздравляю, вы вошли в систему");
+    string log = Console.ReadLine();
+    string pas = Console.ReadLine();
+    if (login == log && password == pas)
+    {
+        Console.WriteLine("Поздравляю, вы вошли в систему");
+        i += 3;
+    }
+    else
+    {
+        Console.WriteLine("К сожеления пароль или логин введены не правильно");
+        i++;
+    }
 }
-else
-{
-    Console.WriteLine("К сожеления пароль или логин введены не правильно");
-}
+while (i < 3);
